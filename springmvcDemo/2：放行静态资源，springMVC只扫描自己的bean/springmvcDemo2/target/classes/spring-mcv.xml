@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+">
+
+        <context:component-scan base-package="cn.cdw"> <!--配置注解包扫描-->
+            <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/><!--使用包含过滤器仅扫描springMVC该扫描到的bean,为了避免springMVC扫描到spring的其它无用的bean，所以这里配置让让只扫描只加载@Controller修饰的内容-->
+        </context:component-scan>
+
+    <!--<mvc:resources mapping="/img/**" location="/img/"/> --><!--放行指定的静态资源，mapping表示放行的资源，location表示资源的位置-->
+     <!--<mvc:default-servlet-handler/>--> <!--简化配置，放行所有的静态资源-->
+
+
+</beans>

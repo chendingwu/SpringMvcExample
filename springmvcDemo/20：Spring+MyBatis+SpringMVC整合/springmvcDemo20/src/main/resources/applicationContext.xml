@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+">
+
+    <context:component-scan base-package="cn.cdw"> <!--注解包扫描-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/> <!--spring的核心配置文件不加载Controller对应的bean，Controlled也是加载不到spring的bean-->
+    </context:component-scan>
+
+
+    <context:property-placeholder location="classpath:jdbc.properties"/><!--加载数据源配置文件-->
+
+    <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource"> <!--druid数据库连接池-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!--///////////////////////////////////////////////spring核心配置文件整合mybatis/////////////////////////////..///-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="druidDataSource"/> <!--数据源-->
+        <property name="typeAliasesPackage" value="cn.cdw.pojo"/><!--使用别名-->
+
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <prop key="helperDialect">mysql</prop> <!--数据库方言-->
+                            <prop key="reasonable">true</prop> <!--第一页和最后一页处理-->
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="cn.cdw.mapper"/><!--扫描映射mapper映射文件-->
+    </bean>
+
+    <!--///////////////////////////////////////////////spring核心配置文件整合事务管理////////////////////////////////-->
+    <tx:annotation-driven transaction-manager="txManager"/> <!--事务注解驱动-->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" >
+        <property name="dataSource" ref="druidDataSource"/>
+    </bean>
+</beans>

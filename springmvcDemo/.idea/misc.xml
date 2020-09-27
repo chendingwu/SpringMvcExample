@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo1" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo10" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo11" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo12" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo13" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo14" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo15" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo16" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo17" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo18" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo19" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo2" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo20" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo21" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo3" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo4" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo5" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo6" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo7" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo8" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcDemo9" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springMvcDemo1/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo2/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo3/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo4/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo5/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo6/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo7/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo8/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo9/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo10/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo11/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo12/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo13/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo14/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo15/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo16/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo17/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo18/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo19/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo20/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvcDemo21/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

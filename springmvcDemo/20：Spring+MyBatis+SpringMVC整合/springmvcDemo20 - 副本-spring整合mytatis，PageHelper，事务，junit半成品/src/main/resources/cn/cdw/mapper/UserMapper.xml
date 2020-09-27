@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.cdw.mapper.UserMapper">
+    <select id="selectByPage" resultType="user">
+        select * from user
+    </select>
+
+    <select id="selectById" parameterType="user" resultType="user">
+        select * from user  where id=#{id}
+    </select>
+
+    <insert id="insert" parameterType="user">
+        insert  into  user values(#{id},#{username},#{password},#{realName},#{birthday})
+    </insert>
+
+    <update id="update" parameterType="user">
+        update user set username=#{username},password=#{password},realName=#{realName},birthday=#{birthday}  where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="user">
+        delete from user where id=#{id}
+    </delete>
+    <select id="selectByUsernameAndPassword" resultType="user">
+        select * from user where username = #{username} and password=#{password}
+    </select>
+</mapper>
